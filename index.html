@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="scripts.jss"></script>
     <title>Document</title>
 </head>
 <body>
     <p>See Console</p>
 
     <script>
-        console.log("Hello world!!!");
-    </script>
+        var x = parseInt(prompt("Pick a number up to 100"));
 
+        for (var i = 0; i < x; i++) {
+            if (i % 2 === 0 && i > 0) {
+                console.log('inside loop, i is', i);
+            }
+        }
+
+        for (var i = x; i > 0; i--) {
+            console.log('inside loop, i is', i);
+        }
+
+        for (var i = 0; i < x; i++) {
+            if (i % 3 === 0 && i % 5 === 0 && i > 0) {
+                console.log('fizzbuzz', i);
+            } else if (i % 3 === 0) {
+                console.log('fizz ', i);
+            } else if (i % 5 === 0){
+                console.log('buzz ', i);
+            }
+        }
+
+    </script>
 </body>
 </html>
+
